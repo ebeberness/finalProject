@@ -173,12 +173,12 @@ function star(x, y, radius1, radius2, npoints) {
 }
 
 function fillBlack(){
- stroke("black");
+ stroke(0);
   fill ("black");
 }
 
 function fillWhite(){
   fill("white");
-  stroke("white");
+  stroke(255);
 }
 
