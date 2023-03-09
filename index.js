@@ -70,14 +70,17 @@ function draw() {
   }
   
   for (const lin of lines) {
+    strokeWeight(5);
     line(lin.startX, lin.startY, lin.endX, lin.endY);
   }
   
   for (const circ of circles) {
+    strokeWeight(0);
     circle(circ.startX, circ.startY, 25);
   }
   
   for (const s of stars) {
+    strokeWeight(0);
     star(s.startX, s.startY, 10, 5, 5);
   }
   
@@ -100,7 +103,6 @@ function drawLine() {
 
   if (isDrawing) {
     stroke(255);
-    strokeWeight(5);
     line(startX, startY, mouseX, mouseY);
   }
   
@@ -173,12 +175,13 @@ function star(x, y, radius1, radius2, npoints) {
 }
 
 function fillBlack(){
- stroke(0);
-  fill ("black");
+  stroke(0);
+ fill ("black");
 }
 
 function fillWhite(){
-  fill("white");
   stroke(255);
+  fill("white");
+
 }
 
