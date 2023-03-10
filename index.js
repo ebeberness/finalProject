@@ -102,7 +102,7 @@ function drawLine() {
     }
 
   if (isDrawing) {
-    stroke(255);
+   // stroke(0);
     line(startX, startY, mouseX, mouseY);
   }
   
@@ -110,6 +110,7 @@ function drawLine() {
 }
 
 function drawCircles() {
+//strokeWeight (0);
  shape = "circle";
 
   if (mouseIsPressed) {
@@ -123,13 +124,14 @@ function drawCircles() {
       }
 
   if (isDrawing) {
-    stroke(255);
+    //stroke(0);
     circle(mouseX, mouseY, 25);
   }
   
 }
 
 function drawStars() {
+ //strokeWeight (0);
  shape = "star";
   
   if (mouseIsPressed) {
@@ -143,7 +145,7 @@ function drawStars() {
       }
 
   if (isDrawing) {
-    stroke(255);
+    //stroke(0);
     star(mouseX, mouseY, 10, 5, 5);
   }
 }
@@ -175,13 +177,13 @@ function star(x, y, radius1, radius2, npoints) {
 }
 
 function fillBlack(){
-  stroke(0);
  fill ("black");
+ stroke(0);
 }
 
 function fillWhite(){
-  stroke(255);
   fill("white");
+  stroke(255);
 
 }
 
