@@ -11,9 +11,12 @@ let stars = [];
 let shape = "";
 
 function setup() {
-  
+
   createCanvas(600, 600);
   colorMode(HSB);
+
+  stroke (255);
+  fill(255);
   slider = createSlider(0, 360, 60, 40);
   slider.position(620, 10);
   slider.style('width', '80px');
@@ -102,7 +105,7 @@ function drawLine() {
     }
 
   if (isDrawing) {
-   // stroke(0);
+    //stroke(255);
     line(startX, startY, mouseX, mouseY);
   }
   
@@ -124,7 +127,7 @@ function drawCircles() {
       }
 
   if (isDrawing) {
-    //stroke(0);
+    //stroke(255);
     circle(mouseX, mouseY, 25);
   }
   
@@ -133,7 +136,7 @@ function drawCircles() {
 function drawStars() {
  //strokeWeight (0);
  shape = "star";
-  
+ //stroke(0);
   if (mouseIsPressed) {
     if (isDrawing) {
       stars.push({
@@ -145,7 +148,7 @@ function drawStars() {
       }
 
   if (isDrawing) {
-    //stroke(0);
+   // stroke(255);
     star(mouseX, mouseY, 10, 5, 5);
   }
 }
@@ -177,12 +180,12 @@ function star(x, y, radius1, radius2, npoints) {
 }
 
 function fillBlack(){
- fill ("black");
+ fill (0);
  stroke(0);
 }
 
 function fillWhite(){
-  fill("white");
+  fill (255);
   stroke(255);
 
 }
